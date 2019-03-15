@@ -7,3 +7,6 @@ from plotnine.data import diamonds
 
 p = ggplot(aes(x='carat', y='price'), diamonds)
 p + geom_point(aes(color='carat'))
+
+
+ggplot(aes(x = 'carat', y = 'price'),diamonds)+geom_point()+ geom_smooth(span=.3, se=False) + facet_wrap(['cut'])
